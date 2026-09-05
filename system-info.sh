@@ -1,42 +1,27 @@
- #!/bin/bash
+#!/bin/bash
 
-# ==========================================
-# PayFlowa Linux System Diagnostic Toolkit
-# ==========================================
+echo "===== SYSTEM INFORMATION ====="
 
-# Get hostname
-echo "hostname: $(hostname)"
+echo "Hostname: $(hostname)"
+echo "Current User: $(whoami)"
+echo "Date/Time: $(date)"
 
-# Get current user
-echo "whoami: $(whoami)"
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+    echo "Operating System: $PRETTY_NAME"
+else
+    echo "Operating System: Unknown"
+fi
 
-# Get date and time
-echo "date: $(date)"
+echo "Kernel Version: $(uname -r)"
+echo "Uptime: $(uptime -p)"
 
-# Get operating system
-echo "Operating System:"
-cat /etc/os-release
-
-# Get kernel version
-echo "Kernel Version:"
-uname -r
-
-# Get system uptime
-echo "System Uptime:"
-uptime
-
-# Get CPU information
 echo "CPU Information:"
-lscpu
+lscpu | grep -E '^Model name|^CPU\(s\):' | head -2
 
-# Get memory information
 echo "Memory Information:"
 free -h
 
-# Get current working directory
-echo "Current Working Directory:"
-pwd
+echo "Current Working Directory: $(pwd)"
 
-# ==========================================
-# End of system diagnostics
-# ==========================================
+echo "=============================="
