@@ -1,7 +1,4 @@
-Absolutely. This time I’ll make it a complete troubleshooting/development log, including the problem → diagnosis → command used → result/fix for everything we’ve actually worked through so far.
-I’ll keep it separate from your main README so your portfolio README stays clean. This can be saved as something like DEVELOPMENT_LOG.md.
-Payflowa Linux Diagnostic Toolkit
-Development & Troubleshooting Log
+
 A chronological record of the development process, problems encountered, troubleshooting steps, commands used, and solutions implemented while building the Payflowa Linux Diagnostic Toolkit.
 
 1. Project Overview
