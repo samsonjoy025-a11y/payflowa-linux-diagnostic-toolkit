@@ -746,8 +746,4 @@ Git
 GitHub
   +
 Troubleshooting
-The next stage is to complete grade.sh and perform a final validation of the entire project.
-This is the version I would keep as DEVELOPMENT_LOG.md in the repository. It tells the story behind the project and, importantly, preserves the actual commands you used to troubleshoot each problem, which is valuable evidence of your DevOps learning process.
-
-
 
